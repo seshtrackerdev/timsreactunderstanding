@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Port Configuration
+
+This project uses the following port configuration:
+
+- Frontend (Vite Dev Server): `localhost:5173`
+  - The React application served by Vite runs on this port during development
+  - This is configured in [vite.config.ts](mdc:vite.config.ts)
+  - All frontend development and testing should use this port
+
+- API Testing:
+  - When testing API endpoints from [src/worker/index.ts](mdc:src/worker/index.ts), use `localhost:5173/api/*`
+  - Example endpoints:
+    - `http://localhost:5173/api/` - Basic GET endpoint
+    - `http://localhost:5173/api/echo` - Echo POST endpoint
+    - `http://localhost:5173/api/status/:code` - Status code tester
+    - `http://localhost:5173/api/request-info` - Request information
+
+Never use any other port for local development. All documentation, testing, and development should reference port 5173.
+

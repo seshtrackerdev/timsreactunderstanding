@@ -10,5 +10,13 @@
   "upload_source_maps": true,
   "assets": {
     "not_found_handling": "single-page-application"
+  },
+  "dev": {
+    "port": 5173,
+    "inspector_port": 9229
+  },
+  "env": {
+    "production": {},
+    "staging": {}
   }
 }
